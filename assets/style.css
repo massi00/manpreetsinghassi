@@ -1,171 +1,225 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    background-color: black;
-    color: white;
-  }
-  
-  /* header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 24px;
-  } */
+  background-color: black;
+  color: white;
+}
 
-.desktop-menu{
-    display: none;
-  }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-.navigation{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    padding: 24px;
-    box-shadow: 0px 4px 16px rgba(255, 255, 255, 0.25);
-  }
-  
+.desktop-menu {
+  display: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 24px;
+  box-shadow: 0px 4px 16px rgba(255, 255, 255, 0.25);
+}
+
 .hamburger {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-  }
-  
+  display: block;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .hamburger img {
-    width: 30px;
-    height: 30px;
-  }
-  
+  width: 30px;
+  height: 30px;
+}
+
 .cross-icon {
-    display: none;
-  }
-  
+  display: none;
+}
+
 .menu {
-    position: fixed;
-    top: 9vh;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    /* Add the following properties to hide the menu by default */
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-    z-index: 1;
-  }
-  
+  position: fixed;
+  top: 9vh;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  /* Add the following properties to hide the menu by default */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
 .menu ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .menu li {
-    margin-bottom: 20px;
-    list-style: none;
-  }
-  
+  margin-bottom: 20px;
+  list-style: none;
+}
+
 .menu a {
-    color: #fff ;
-    font-size: 24px;
-    text-decoration: none;
-  }
-  
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
 .menu a:hover {
-    color: #1ED760;
+  color: #1ED760;
+  font-weight: bold;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.hamburger.active .open {
+  display: none;
+}
+
+.hamburger.active .close {
+  display: block;
+}
+
+.hamburger .close {
+  display: none;
+}
+
+.brand-logo {
+  position: relative;
+  display: inline-block;
+}
+
+.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.brand-logo:hover .logo {
+  opacity: 0;
+}
+
+.brand-logo:hover .hover {
+  opacity: 1;
+}
+
+
+@media screen and (min-width: 800px) {
+
+  .menu,
+  .hamburger {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: unset;
+  }
+
+  .desktop-menu ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .desktop-menu li {
+    list-style: none;
+    margin-right: 2rem;
+  }
+
+  .desktop-menu li a {
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    /* sets the border radius to 10 pixels */
+  }
+
+  .desktop-menu li a:hover {
+    background-color: #1ED760;
     font-weight: bold;
-  }
-  
-  .show {
-    display: block;
-  }
-  
-  .hide {
-    display: none;
-  }
-  
-  .hamburger.active .open {
-    display: none;
-  }
-  
-  .hamburger.active .close {
-    display: block;
-  }
-  
-  .hamburger .close {
-    display: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    /* sets the border radius to 10 pixels */
+    transition: all 0.3s ease;
+    /* adds a smooth transition effect */
+    color: black;
   }
 
   .brand-logo {
-    position: relative;
-    display: inline-block;
+    margin-left: 2rem;
   }
-  
-  .hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+
+
+
+}
+
+/* Slider */
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*Area of images*/
+.wrapper {
+  width: 100%;
+  display: flex;
+  animation: slide 15s infinite;
+}
+
+img {
+  width: 100%;
+}
+
+/*Animation activated by keyframes*/
+@keyframes slide {
+  0% {
+    transform: translateX(0);
   }
-  
-  .brand-logo:hover .logo {
-    opacity: 0;
+
+  25% {
+    transform: translateX(0);
   }
-  
-  .brand-logo:hover .hover {
-    opacity: 1;
+
+  30% {
+    transform: translateX(-100%);
   }
-  
-  
-  @media screen and (min-width: 800px){
 
-    .menu, .hamburger{
-      display: none;
-    }
-
-    .desktop-menu{
-      display: unset;
-    }
-
-    .desktop-menu ul{
-      display: flex;
-      flex-direction: row;
-    }
-
-    .desktop-menu li {
-      list-style: none;
-      margin-right: 2rem;
-    }
-
-    .desktop-menu li a {
-      color: white;
-      text-decoration: none;
-      border-radius: 25px; /* sets the border radius to 10 pixels */
-    }
-    
-    .desktop-menu li a:hover {
-      background-color: #1ED760;
-      font-weight: bold;
-      padding: 1rem 2rem;
-      border-radius: 25px; /* sets the border radius to 10 pixels */
-      transition: all 0.3s ease; /* adds a smooth transition effect */
-    }
-
-    .brand-logo{
-      margin-left: 2rem;
-    }
-
-    
-
+  50% {
+    transform: translateX(-100%);
   }
+
+  55% {
+    transform: translateX(-200%);
+  }
+
+  75% {
+    transform: translateX(-200%);
+  }
+
+  80% {
+    transform: translateX(-300%);
+  }
+
+  100% {
+    transform: translateX(-300%);
+  }
+}

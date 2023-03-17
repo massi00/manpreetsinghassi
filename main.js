@@ -16,4 +16,3 @@ function mobileMenu() {
       navMenu.style.visibility = "hidden";
     }
   }
-
