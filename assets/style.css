@@ -167,13 +167,64 @@ img {
     margin-left: 2rem;
   }
 
+  main h1{
+    text-align: center;
+    padding: 20vh;
+  }
+
+  .projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 90%;
+    margin: auto;
+    gap: 3vh;
+  }
+
+  
+
+  .project{
+    /* box-shadow: 7px 6px 16px #1ED760; */
+  }
+
+  .project h2{
+    padding: 20px;
+    text-align: center;
+  }
+
+  .project p{
+    padding-bottom: 20px;
+  }
+
+  .project a{
+    color: white;
+    text-decoration: none;
+    background-color: #1ED760;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    color: black;
+    margin-top: 20px;
+  }
+
+  .project a:hover{
+    
+    background-color: black;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    /* sets the border radius to 10 pixels */
+    transition: all 0.3s ease;
+    /* adds a smooth transition effect */
+    color: #1ED760;
+    border: 3px solid #1ED760;
+  }
+
 
 
 }
 
 /* Slider */
 
-.container {
+.slider {
   width: 100%;
   overflow: hidden;
 }
