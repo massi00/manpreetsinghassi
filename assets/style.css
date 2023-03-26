@@ -5,9 +5,10 @@
 }
 
 body {
-  background-color: black;
+  background-color: #121212;
   color: white;
-  
+  font-family: "poppins", sans-serif;
+
 }
 
 img {
@@ -49,7 +50,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: #121212;
   /* Add the following properties to hide the menu by default */
   opacity: 0;
   visibility: hidden;
@@ -178,22 +179,32 @@ img {
     grid-template-columns: 1fr 1fr;
     max-width: 90%;
     margin: auto;
-    gap: 3vh;
+    gap: 6vh;
   }
 
   
 
   .project{
     /* box-shadow: 7px 6px 16px #1ED760; */
+    background-color: #181818;
+    padding: 32px 32px 54px 32px;
+    border-radius: 25px;
+    transition: all .3s ease;
+  }
+
+  .project:hover{
+    background-color: #262626;
   }
 
   .project h2{
-    padding: 20px;
-    text-align: center;
+    padding: 20px 20px 20px 0;
+    text-align: left;
+    font-size: 32px;
   }
 
   .project p{
     padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   .project a{
@@ -203,23 +214,20 @@ img {
     padding: 1rem 2rem;
     border-radius: 25px;
     color: black;
-    margin-top: 20px;
   }
 
   .project a:hover{
     
-    background-color: black;
+    background-color: #262626;
     font-weight: bold;
     padding: 1rem 2rem;
     border-radius: 25px;
-    /* sets the border radius to 10 pixels */
+    
     transition: all 0.3s ease;
-    /* adds a smooth transition effect */
+    
     color: #1ED760;
     border: 3px solid #1ED760;
   }
-
-
 
 }
 
@@ -234,44 +242,60 @@ img {
 .wrapper {
   width: 100%;
   display: flex;
-  animation: slide 15s infinite;
+  animation: slide 25s infinite;
 }
 
 img {
   width: 100%;
 }
 
-/*Animation activated by keyframes*/
+
 @keyframes slide {
   0% {
     transform: translateX(0);
   }
 
-  25% {
+  16.666% {
     transform: translateX(0);
   }
 
-  30% {
+  20% {
     transform: translateX(-100%);
+  }
+
+  33.333% {
+    transform: translateX(-100%);
+  }
+
+  36.666% {
+    transform: translateX(-200%);
   }
 
   50% {
-    transform: translateX(-100%);
-  }
-
-  55% {
     transform: translateX(-200%);
   }
 
-  75% {
-    transform: translateX(-200%);
-  }
-
-  80% {
+  53.333% {
     transform: translateX(-300%);
+  }
+
+  66.666% {
+    transform: translateX(-300%);
+  }
+
+  70% {
+    transform: translateX(-400%);
+  }
+
+  83.333% {
+    transform: translateX(-400%);
+  }
+
+  86.666% {
+    transform: translateX(-500%);
   }
 
   100% {
-    transform: translateX(-300%);
+    transform: translateX(-500%);
   }
 }
